@@ -1,0 +1,21 @@
+The **softmax function** is a mathematical function used in machine learning, particularly in classification problems, to convert a vector of raw scores (logits) into probabilities. It is often used in the final layer of a neural network for multi-class classification.
+
+### Formula:
+For a vector **z** with elements \( z_1, z_2, ..., z_n \), the softmax function computes:
+
+\[
+\sigma(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{n} e^{z_j}}
+\]
+
+where:
+- \( e^{z_i} \) exponentiates each score to make all values positive.
+- The denominator ensures that the sum of all outputs is **1**, making it a valid probability distribution.
+
+### Properties:
+- Outputs a probability distribution over classes.
+- The highest value corresponds to the most likely class.
+- The differences between scores affect the probabilities.
+
+### Example:
+If you have raw scores (logits) **[2.0, 1.0, 0.1]**, applying softmax would yield probabilities like **[0.659, 0.242, 0.099]**, meaning the first class is the most likely.
+
